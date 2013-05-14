@@ -26,6 +26,7 @@ package
 			var c:Camera = Camera.getCamera();
 			var v:Video = new Video(640, 480);
 			v.attachCamera(c);
+			v.scaleX = -1;
 			v.x += v.width;
 			addChild(v);
 			mt = new CMotionTacker(v);
