@@ -34,7 +34,7 @@ package
 			
 			box1 = new Box(0x0000FF); addChild(box1); 
 			box2 = new Box(0x00FF00); addChild(box2);
-			box2.x = 100; box2.y = 50;
+			box2.x = 320; box2.y = 240;
 			
 			v.addEventListener(Event.EXIT_FRAME, loop);
 		}
