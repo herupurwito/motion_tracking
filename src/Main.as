@@ -26,6 +26,7 @@ package
 			var c:Camera = Camera.getCamera();
 			var v:Video = new Video(640, 480);
 			v.attachCamera(c);
+			v.x += v.width;
 			addChild(v);
 			mt = new CMotionTacker(v);
 			view = new Bitmap(new BitmapData(640, 480));
@@ -40,7 +41,7 @@ package
 		private function loop(e:Event):void {
 			var p:Point = new Point();
 			if (mt.track()) {
-				p.x = mt.x + view.x;
+				p.x = 640-(mt.x + view.x);
 				p.y = mt.y + view.y;	
 
 				box1.x = p.x - view.x;
